@@ -1,4 +1,8 @@
 import java.awt.GridBagLayout;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import javax.swing.JPanel;
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -155,7 +159,23 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = DriverManager.getConnection(
+                    "jdbc:mysql://localhost:3306/a","nishant","a");   // Connecting to SQL server
+            Statement stmt= con.createStatement();
+            ResultSet rs=stmt.executeQuery("select * from a");
+            while(rs.next())
+                System.out.println(rs.getInt(1));
+            con.close();
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+
         hello b=new hello();
+
         setContentPane(b);
         setVisible(true);
      

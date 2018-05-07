@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 
+import javax.swing.*;
+import java.awt.*;
+
 /**
  *
  * @author god
@@ -15,6 +18,7 @@ public class attendance extends javax.swing.JPanel {
      */
     public attendance() {
         initComponents();
+
     }
 
     /**
@@ -37,7 +41,7 @@ public class attendance extends javax.swing.JPanel {
             .addGap(0, 300, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
-
+    Frame frame = new JFrame();
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables
