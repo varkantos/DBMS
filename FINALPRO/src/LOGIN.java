@@ -1,15 +1,15 @@
 
 import java.awt.Frame;
-import java.sql.Connection;
-import java.sql.DriverManager;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 /**
  *
  * @author god
@@ -120,15 +120,6 @@ public class LOGIN extends javax.swing.JFrame {
        jf.setExtendedState(jf.MAXIMIZED_BOTH);
        jf.setVisible(true);
        this.setVisible(false);
-       try{
-           Class.forName("com.mysql.jdbc.Driver");
-           Connection con = DriverManager.getConnection(
-                   "jdbc:mysql://localhost:3306/a","nishant","a");   // Connecting to SQL server
-
-       }catch (Exception e){
-           e.printStackTrace();
-       }
-
        }
        else JOptionPane.showMessageDialog(rootPane, "LOGIN FAILED");
     }//GEN-LAST:event_jButton1ActionPerformed
